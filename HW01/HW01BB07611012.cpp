@@ -20,9 +20,13 @@ double answer1; // store variable in global allow web-cat check
 
 int main()
 {
-    double keyin_a, keyin_b, keyin_c;       // declare three double variable
-    cin >> keyin_a >> keyin_b >> keyin_c;   // input three double
-    answer1 = (keyin_a + keyin_b + keyin_c) / 3;    // calculate average
+    double keyin_a, keyin_b, keyin_c;   // declare three double variable
+    double average;                     // declare average variable
+    cin >> keyin_a >> keyin_b >> keyin_c;               // input three double
+    average = (keyin_a + keyin_b + keyin_c) / 3.0;      // calculate average
+    cout << "The average grade is " << average << endl; // print average
+    answer1 = average;  // assign average to answer1
+
     return 0;
 }
 
