@@ -18,6 +18,9 @@
 
 using namespace std;
 
+int answer1;
+// Store the total number of rounds in this variable
+
 enum class RPS_game
 {
     Rock,
@@ -39,15 +42,43 @@ bool contest(RPS_game& left, RPS_game& right)
 
 int main()
 {
-    RPS_game A = RPS_game::Rock;
-    RPS_game B = RPS_game::Paper;
-    if(A == B)
-        cout << "draw" << endl;
-    else if(contest(A, B))
-        cout << "win" << endl;
-    else
-        cout << "lose" << endl;
+    int player_win_round[2] = {0};
+    char player_input[2];
+    RPS_game player_figure[2];
+    int count = 0;
+    while(cin >> player_input[0] >> player_input[1])
+    {
+        count++;
+        for(int i = 0;i < 2;i++)
+        {
+            switch(player_input[i])
+            {
+                case 'R':
+                    player_figure[i] = RPS_game::Rock;
+                    break;
+                case 'S':
+                    player_figure[i] = RPS_game::Scissors;
+                    break;
+                case 'P':
+                    player_figure[i] = RPS_game::Paper;
+                    break;
+            }
+        }
+        if(player_figure[0] == player_figure[1]) // draw
+            continue;
+        else if(contest(player_figure[0], player_figure[1])) // p0 win
+        {
+            player_win_round[0]++;
+        }
+        else // p1 win
+        {
+            player_win_round[1]++;
+        }
 
+        if(player_win_round[0] == MAX || player_win_round[1] == MAX)
+            break;
+    }
+    answer1 = count;
     return 0;
 }
 
