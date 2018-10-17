@@ -26,18 +26,19 @@ static int calc_special_number(int); // return the number by the sum of the squa
 
 int main()
 {
+    cout << "happy number list: " << endl;
     for(int i = 0;i < MAX;i++)
     {
-        bool visited[MAX] = {false};
+        bool visited[MAX] = {false}; // recored if visit to avoid infinite loop
         int test_num = i;
-        while(test_num != 1)
+        while(test_num != 1) // break loop if i is a happy number
         {
-            if(visited[test_num])
+            if(visited[test_num]) // break if it is a infinite loop
                 break;
             visited[test_num] = true;
             test_num = calc_special_number(test_num);
         }
-        if(test_num == 1)
+        if(test_num == 1) // happy number
         {
             answer1 = i;
             cout << i << " ";
@@ -46,11 +47,12 @@ int main()
     return 0;
 }
 
+// return the number by the sum of the squares of its digits
 static int calc_special_number(int n)
 {
     int ret = 0;
-    string s(string(n));
+    string s(to_string(n));
     for(int i = 0;i < s.length();i++)
-        ret += pow(int(s[i]), 2);
+        ret += pow(int(s[i]) - '0', 2);
     return ret;
 }
