@@ -36,7 +36,7 @@ int main()
     for(int i = 3;i < MAX;i++)
     {
         bool is_prime = true;
-        for(int j = 0;j < primes.size() && primes[j] <= sqrt(i);j++)
+        for(unsigned int j = 0;j < primes.size() && primes[j] <= sqrt(i);j++)
         {
             if(i % primes[j] == 0) // if there are any number j can divise i, set flag to false and break
             {
