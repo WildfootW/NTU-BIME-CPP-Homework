@@ -74,13 +74,13 @@ int main()
 {
     srand (time(NULL));
     int player_win_round = 0, computer_win_round = 0;
-    RPS_game player_figure, computer_figure;
     char player_input;
     int count = 1;
     cout << "Round " << count << "!\n";
     cout << "input your choice: ";
     while(cin >> player_input)
     {
+        RPS_game player_figure, computer_figure;
         count++;
         player_figure = convert_char_rps(player_input);
         computer_figure = convert_char_rps();
