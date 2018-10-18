@@ -21,7 +21,7 @@ using namespace std;
 int answer1;
 // Store the total number of rounds in this variable
 
-enum class RPS_game
+enum RPS_game
 {
     Rock,
     Paper,
@@ -32,12 +32,12 @@ bool contest(RPS_game& left, RPS_game& right)
 {
     if(left == right)
         return false;
-    if(left == RPS_game::Rock)
-        return right == RPS_game::Scissors;
-    else if(left == RPS_game::Paper)
-        return right == RPS_game::Rock;
-    else if(left == RPS_game::Scissors)
-        return right == RPS_game::Paper;
+    if(left == Rock)
+        return right == Scissors;
+    else if(left == Paper)
+        return right == Rock;
+    else if(left == Scissors)
+        return right == Paper;
 }
 
 int main()
@@ -54,13 +54,13 @@ int main()
             switch(player_input[i])
             {
                 case 'R':
-                    player_figure[i] = RPS_game::Rock;
+                    player_figure[i] = Rock;
                     break;
                 case 'S':
-                    player_figure[i] = RPS_game::Scissors;
+                    player_figure[i] = Scissors;
                     break;
                 case 'P':
-                    player_figure[i] = RPS_game::Paper;
+                    player_figure[i] = Paper;
                     break;
             }
         }

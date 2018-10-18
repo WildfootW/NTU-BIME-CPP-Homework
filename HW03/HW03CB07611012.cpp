@@ -52,7 +52,7 @@ static int calc_special_number(int n)
 {
     int ret = 0;
     string s(to_string(n));
-    for(int i = 0;i < s.length();i++)
+    for(unsigned int i = 0;i < s.length();i++)
         ret += pow(int(s[i]) - '0', 2);
     return ret;
 }
