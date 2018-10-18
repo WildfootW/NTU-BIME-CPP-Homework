@@ -30,15 +30,15 @@ int answer2; // Second prime number of the largest pair of twin prime number les
 
 int main()
 {
-    int last_prime = -1; // store the last prime we find out
     vector<int> primes; // store all primes
     vector<pair<int, int>> twin_primes; // store twin primes
-    for(int i = 2;i < MAX;i++)
+    primes.push_back(2);
+    for(int i = 3;i < MAX;i++)
     {
         bool is_prime = true;
-        for(int j = 2;j < sqrt(i);j++)
+        for(int j = 0;j < primes.size() && primes[j] <= sqrt(i);j++)
         {
-            if(i % j == 0) // if there are any number j can divise i, set flag to false and break
+            if(i % primes[j] == 0) // if there are any number j can divise i, set flag to false and break
             {
                 is_prime = false;
                 break;
@@ -46,10 +46,9 @@ int main()
         }
         if(is_prime)
         {
+            if(primes.back() + 2 == i) // check if it is twin prime
+                twin_primes.push_back(make_pair(primes.back(), i));
             primes.push_back(i); // record prime to vector
-            if(last_prime + 2 == i) // check if it is twin prime
-                twin_primes.push_back(make_pair(last_prime, i));
-            last_prime = i; // update last_prime
         }
     }
 
