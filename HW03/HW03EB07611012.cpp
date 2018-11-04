@@ -17,7 +17,7 @@
 #include <cmath>
 #define INF 2147483647
 #define MAX 1000
-//#define BONUS
+#define BONUS
 
 using namespace std;
 
