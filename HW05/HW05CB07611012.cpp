@@ -17,6 +17,8 @@
 #define INF 2147483647
 #define MAXN 10000
 
+#define move(T, U) ((T + border_size + U) % border_size)
+
 using namespace std;
 
 int answer1;    // Store the integer value of the cell at the top-left corner
@@ -24,8 +26,8 @@ int answer2;    // Store the integer value of the cell at the bottom-right corne
 
 inline void new_position(int & x, int & y, int border_size)
 {
-    --x;    x += border_size;   x %= border_size;
-    ++y;    y %= border_size;
+    x = move(x, -1);
+    y = move(y,  1);
     return;
 }
 
@@ -42,8 +44,8 @@ int main()
     {
         if(grid[x][y] != 0)
         {
-            x = (x + border_size + 2) % border_size;
-            y = (y + border_size - 1) % border_size;
+            x = move(x,  2);
+            y = move(y, -1);
         }
         grid[x][y] = i + 1;
         new_position(x, y, border_size);
