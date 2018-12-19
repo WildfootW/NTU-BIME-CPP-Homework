@@ -1,0 +1,15 @@
+round 0:
+player 0: cQ cK s4 dX h4 h5 hJ c6 c9 d2 sX s2 hK point: 9
+player 1: c3 hX d9 h9 c4 sK s3 c2 c7 d5 cA cX hA point: 11
+player 2: s9 d7 dQ dA s5 d8 s8 dK d3 sJ sA hQ h6 point: 16
+player 3: sQ d6 h3 cJ s7 c8 d4 h2 h7 s6 dJ h8 c5 point: 4
+round 1:
+player 0: sQ d4 c5 sK d3 dQ hQ cJ d5 h9 dJ d2 d9 point: 11
+player 1: cQ s8 hJ h5 dK cX sJ h7 s3 d7 hK c2 cA point: 14
+player 2: c9 c7 c4 s6 d6 s9 hA s2 h2 h8 sA h3 s4 point: 8
+player 3: c3 d8 h6 s5 sX dX h4 dA c6 c8 cK s7 hX point: 7
+round 2:
+player 0: d3 d4 d8 dQ c5 s8 s9 d5 h8 hJ d2 cJ h9 point: 4
+player 1: dA c9 c6 h6 hX s2 sJ h3 d6 dX c2 c7 s6 point: 5
+player 2: sX cK h7 s5 cQ h5 sK sA hQ sQ cA s7 d7 point: 20
+player 3: s4 c4 h4 s3 dJ d9 hA c8 hK cX c3 dK h2 point: 11
