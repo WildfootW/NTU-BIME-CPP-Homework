@@ -1,8 +1,8 @@
 //================================================================
 // PROGRAMMER : Shen yu-che
 // DATE : 2018-12-22
-// FILENAME : HW07AB07611012.cpp
-// DESCRIPTION : Program A : Streams and File I/O (50%)
+// FILENAME : HW07BB07611012.cpp
+// DESCRIPTION : Program B : Classes (50%)
 //================================================================
 /*
  * Version 1.0
